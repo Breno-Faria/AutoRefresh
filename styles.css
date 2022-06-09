@@ -1,0 +1,66 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+}
+
+#buttons
+{
+    display: flex;
+    gap: 1rem;
+}
+
+#buttons button
+{
+    width: 3.5rem;
+    height: 3rem;
+    background-color: green;
+}
+
+#stopRefresh
+{
+    height: 2.5rem;
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.num
+{
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.text
+{
+    color: white;
+    font-size: x-small;
+    font-weight: bold;
+}
+
+h1
+{
+    font-weight: bolder;
+    font-size: x-large;
+    text-decoration: underline;
+}
+
+#description
+{
+    font-weight: bold;
+
+}
+
+#header
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
