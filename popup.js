@@ -12,12 +12,13 @@ cinco.addEventListener("click", async () => {
 	  function: () => {
 		sessionStorage.setItem("link", window.location.hostname);
 		sessionStorage.setItem("interval", "300000");
+		window.location.reload();
 	},
 	});
 
-	if (message.textContent != `AutoRefresher com intervalo de 5 minutos foi criado. Recarregue a página para que ele seja ativado.`)
+	if (message.textContent != `AutoRefresher com intervalo de 5 minutos foi criado com sucesso.`)
 	{
-		message.textContent = `AutoRefresher com intervalo de 5 minutos foi criado. Recarregue a página para que ele seja ativado.`
+		message.textContent = `AutoRefresher com intervalo de 5 minutos foi criado com sucesso.`
 	}
 });
 
@@ -30,12 +31,13 @@ quinze.addEventListener("click", async () => {
 	  function: () => {
 		sessionStorage.setItem("link", window.location.hostname);
 		sessionStorage.setItem("interval", "900000");
+		window.location.reload();
 	  },
 	});
 
-	if (message.textContent != `AutoRefresher com intervalo de 15 minutos foi criado. Recarregue a página para que ele seja ativado.`)
+	if (message.textContent != `AutoRefresher com intervalo de 15 minutos foi criado com sucesso.`)
 	{
-		message.textContent = `AutoRefresher com intervalo de 15 minutos foi criado. Recarregue a página para que ele seja ativado.`
+		message.textContent = `AutoRefresher com intervalo de 15 minutos foi criado com sucesso.`
 	}
 });
 
@@ -48,12 +50,13 @@ trinta.addEventListener("click", async () => {
 	  function: () => {
 		sessionStorage.setItem("link", window.location.hostname);
 		sessionStorage.setItem("interval", "900000");
+		window.location.reload();
 	  },
 	});
 
-	if (message.textContent != `AutoRefresher com intervalo de 30 minutos foi criado. Recarregue a página para que ele seja ativado.`)
+	if (message.textContent != `AutoRefresher com intervalo de 30 minutos foi criado com sucesso.`)
 	{
-		message.textContent = `AutoRefresher com intervalo de 30 minutos foi criado. Recarregue a página para que ele seja ativado.`
+		message.textContent = `AutoRefresher com intervalo de 30 minutos foi criado com sucesso.`
 	}
 });
 
@@ -67,7 +70,8 @@ stopRefresh.addEventListener("click", async () => {
 	chrome.scripting.executeScript({
 	  target: { tabId: tab.id },
 	  function: () => {
-		  sessionStorage.clear();
+		  sessionStorage.removeItem("link");
+		  sessionStorage.removeItem("interval");
 	  },
 	});
 
